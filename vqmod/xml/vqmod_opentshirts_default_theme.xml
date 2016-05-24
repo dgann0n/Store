@@ -1,0 +1,136 @@
+<modification>
+	<id>OPENTSHIRTS</id>
+	<version>1.3c</version>
+	<vqmver>2.5.0</vqmver>
+	<author>joseandriani / modified for OC 2.1+ by M7 (m7ws.com)</author>
+	<file name="catalog/view/theme/*/template/product/category.tpl">
+		<operation>
+			<search position="replace"><![CDATA[<button type="button" onclick="cart.add('<?php echo $product['product_id']; ?>', '<?php echo $product['minimum']; ?>');"><i class="fa fa-shopping-cart"></i> <span class="hidden-xs hidden-sm hidden-md"><?php echo $button_cart; ?></span></button>]]></search>
+			<add><![CDATA[
+		<?php if ($product['is_printable']) { ?>
+			<button type="button" onclick="window.location.href = '<?php echo $product['href']; ?>';"><i class="fa fa-search"></i> <span class="hidden-xs hidden-sm hidden-md"><?php echo $text_more_details; ?></span></button>
+		<?php } else { ?>
+			<button type="button" onclick="cart.add('<?php echo $product['product_id']; ?>', '<?php echo $product['minimum']; ?>');"><i class="fa fa-shopping-cart"></i> <span class="hidden-xs hidden-sm hidden-md"><?php echo $button_cart; ?></span></button>
+		<?php } ?>
+				]]></add>
+		</operation>
+
+		<operation>
+			<search position="replace" offset="11"><![CDATA[<?php if ($product['price']) { ?>]]></search>
+			<add><![CDATA[
+		<?php if ($product['is_printable']) { ?>
+			<p class="price">
+				<?php echo $text_starting_at; ?><?php echo $product['price']; ?>
+			</p>
+		<?php } else { ?>
+				<?php if ($product['price']) { ?>
+				<p class="price">
+                  <?php if (!$product['special']) { ?>
+                  <?php echo $product['price']; ?>
+                  <?php } else { ?>
+                  <span class="price-new"><?php echo $product['special']; ?></span> <span class="price-old"><?php echo $product['price']; ?></span>
+                  <?php } ?>
+                  <?php if ($product['tax']) { ?>
+                  <span class="price-tax"><?php echo $text_tax; ?> <?php echo $product['tax']; ?></span>
+                  <?php } ?>
+                </p>
+				<?php } ?>
+		<?php } ?>
+				]]></add>
+		</operation>
+
+
+	</file>
+	<file name="catalog/view/theme/*/template/product/search.tpl">
+		<operation>
+			<search position="replace"><![CDATA[<button type="button" onclick="cart.add('<?php echo $product['product_id']; ?>', '<?php echo $product['minimum']; ?>');"><i class="fa fa-shopping-cart"></i> <span class="hidden-xs hidden-sm hidden-md"><?php echo $button_cart; ?></span></button>]]></search>
+			<add><![CDATA[
+		<?php if ($product['is_printable']) { ?>
+			<button type="button" onclick="window.location.href = '<?php echo $product['href']; ?>';"><i class="fa fa-search"></i> <span class="hidden-xs hidden-sm hidden-md"><?php echo $text_more_details; ?></span></button>
+		<?php } else { ?>
+			<button type="button" onclick="cart.add('<?php echo $product['product_id']; ?>', '<?php echo $product['minimum']; ?>');"><i class="fa fa-shopping-cart"></i> <span class="hidden-xs hidden-sm hidden-md"><?php echo $button_cart; ?></span></button>
+		<?php } ?>
+				]]></add>
+		</operation>
+
+		<operation>
+			<search position="replace" offset="11"><![CDATA[<?php if ($product['price']) { ?>]]></search>
+			<add><![CDATA[
+		<?php if ($product['is_printable']) { ?>
+			<p class="price">
+				<?php echo $text_starting_at; ?><?php echo $product['price']; ?>
+			</p>
+		<?php } else { ?>
+				<?php if ($product['price']) { ?>
+				<p class="price">
+                  <?php if (!$product['special']) { ?>
+                  <?php echo $product['price']; ?>
+                  <?php } else { ?>
+                  <span class="price-new"><?php echo $product['special']; ?></span> <span class="price-old"><?php echo $product['price']; ?></span>
+                  <?php } ?>
+                  <?php if ($product['tax']) { ?>
+                  <span class="price-tax"><?php echo $text_tax; ?> <?php echo $product['tax']; ?></span>
+                  <?php } ?>
+                </p>
+				<?php } ?>
+		<?php } ?>
+				]]></add>
+		</operation>
+	</file>
+
+	<file name="catalog/view/theme/*/template/product/featured.tpl">
+		<operation>
+			<search position="replace"><![CDATA[<button type="button" onclick="cart.add('<?php echo $product['product_id']; ?>');"><i class="fa fa-shopping-cart"></i> <span class="hidden-xs hidden-sm hidden-md"><?php echo $button_cart; ?></span></button>]]></search>
+			<add><![CDATA[
+		<?php if ($product['is_printable']) { ?>
+			<button type="button" onclick="window.location.href = '<?php echo $product['href']; ?>';"><i class="fa fa-search"></i> <span class="hidden-xs hidden-sm hidden-md"><?php echo $text_more_details; ?></span></button>
+		<?php } else { ?>
+			<button type="button" onclick="cart.add('<?php echo $product['product_id']; ?>');"><i class="fa fa-shopping-cart"></i> <span class="hidden-xs hidden-sm hidden-md"><?php echo $button_cart; ?></span></button>
+		<?php } ?>
+				]]></add>
+		</operation>
+
+		<operation>
+			<search position="replace" offset="11"><![CDATA[<?php if ($product['price']) { ?>]]></search>
+			<add><![CDATA[
+		<?php if ($product['is_printable']) { ?>
+			<p class="price">
+				<?php echo $text_starting_at; ?><?php echo $product['price']; ?>
+			</p>
+		<?php } else { ?>
+				<?php if ($product['price']) { ?>
+				<p class="price">
+                  <?php if (!$product['special']) { ?>
+                  <?php echo $product['price']; ?>
+                  <?php } else { ?>
+                  <span class="price-new"><?php echo $product['special']; ?></span> <span class="price-old"><?php echo $product['price']; ?></span>
+                  <?php } ?>
+                  <?php if ($product['tax']) { ?>
+                  <span class="price-tax"><?php echo $text_tax; ?> <?php echo $product['tax']; ?></span>
+                  <?php } ?>
+                </p>
+				<?php } ?>
+		<?php } ?>
+				]]></add>
+		</operation>
+	</file>
+
+
+	<file name="catalog/view/theme/*/template/account/account.tpl">
+		<operation>
+			<search position="after"><![CDATA[<li><a href="<?php echo $transaction; ?>"><?php echo $text_transaction; ?></a></li>]]></search>
+			<add><![CDATA[
+
+			<li><a href="<?php echo $my_designs; ?>"><?php echo $text_my_designs; ?></a></li>
+
+
+			]]></add>
+		</operation>
+	</file>
+</modification>
+
+
+
+
+
+
