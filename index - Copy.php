@@ -18,11 +18,8 @@ if (!defined('DIR_APPLICATION')) {
 	exit;
 }
 
-// vQmod
-require_once('./vqmod/vqmod.php');
-$vqmod = new VQMod();
-// VQMODDED Startup
-require_once($vqmod->modCheck(DIR_SYSTEM . 'startup.php'));
+// Startup
+require_once(DIR_SYSTEM . 'startup.php');
 
 // Registry
 $registry = new Registry();
