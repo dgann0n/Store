@@ -39,10 +39,10 @@ RewriteRule ^([^?]*) index.php?_route_=$1 [L,QSA]
 # php_flag magic_quotes_gpc Off
 
 # 3. Set max upload file size. Most hosts will limit this and not allow it to be overridden but you can try
-# php_value upload_max_filesize 999M
+# php_value upload_max_filesize 64M
 
 # 4. set max post size. uncomment this line if you have a lot of product options or are getting errors where forms are not saving all fields
-# php_value post_max_size 999M
+# php_value post_max_size 64M
 
 # 5. set max time script can take. uncomment this line if you have a lot of product options or are getting errors where forms are not saving all fields
 # php_value max_execution_time 200
