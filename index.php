@@ -2,6 +2,11 @@
 // Version
 define('VERSION', '2.1.0.1');
 
+// Enables PHP error reporting
+error_reporting(E_ALL);
+ini_set('display_errors', 'On');
+
+
 // Configuration
 if (is_file('config.php')) {
 	require_once('config.php');
