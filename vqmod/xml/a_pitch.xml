@@ -240,7 +240,8 @@
 				<add><![CDATA[$value]]></add>
 		</operation>
 		<operation>
-				<search position="after"><![CDATA[$product['key'],]]></search>
+				<!--search position="after"><![CDATA[$product['key'],]]></search-->
+				<search position="after"><![CDATA[$product['product-id'],]]></search>
 				<add><![CDATA[
 					'design_id'   => $product['design_id'],
 					'upload'   => $product['upload'],
