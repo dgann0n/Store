@@ -5,7 +5,7 @@
     <?php } elseif ($percentage < 0) { ?>
     <i class="fa fa-caret-down"></i>
     <?php } ?>
-    <?php echo $percentage; ?>%</span></div>
+    <?php echo $percentage; ?>%%</span></div>
   <div class="tile-body"><i class="fa fa-shopping-cart"></i>
     <h2 class="pull-right"><?php echo $total; ?></h2>
   </div>
