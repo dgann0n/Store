@@ -1,0 +1,18 @@
+<modification>
+	<id>Bugfixes for ControllerUserUserPermission</id>
+	<version>2.x-1.0</version>
+	<vqmver>2.5.1</vqmver>
+	<author>mhccorp.com</author>
+
+	<file name="admin/controller/user/user_permission.php">
+		<operation>
+			<search position="before"><![CDATA[$permission = substr($controller, 0, strrpos($controller, '.'));]]></search>
+			<add><![CDATA[
+			if ((strlen($controller)<4) || (substr($controller, strlen($controller)-4, 4) != '.php')) {
+				continue;
+			}
+			]]></add>
+		</operation>
+	</file>
+
+</modification>

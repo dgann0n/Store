@@ -62,7 +62,7 @@ class ControllerExtensionInstaller extends Controller {
 
 		if (!$json) {
 			if (!empty($this->request->files['file']['name'])) {
-				if (substr($this->request->files['file']['name'], -10) != '.ocmod.zip' && substr($this->request->files['file']['name'], -10) != '.vqmod.zip' && substr($this->request->files['file']['name'], -10) != '.ocmod.xml' && substr($this->request->files['file']['name'], -10) != '.vqmod.xml') {
+				if (substr($this->request->files['file']['name'], -10) != '.ocmod.zip' && substr($this->request->files['file']['name'], -10) != '.ocmod.xml') {
 					$json['error'] = $this->language->get('error_filetype');
 				}
 
@@ -440,18 +440,10 @@ class ControllerExtensionInstaller extends Controller {
 					if ($name) {
 						$name = $name->nodeValue;
 					} else {
-						$name = $dom->getElementsByTagName('id')->item(0);
-						if ($name) {
-							$name = $name->nodeValue;
-						} else {
-							$name = '';
-						}
+						$name = '';
 					}
 
 					$code = $dom->getElementsByTagName('code')->item(0);
-					if (!$code) {
-						$code = $dom->getElementsByTagName('id')->item(0);
-					}
 
 					if ($code) {
 						$code = $code->nodeValue;

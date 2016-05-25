@@ -37,6 +37,11 @@ class ControllerDashboardOrder extends Controller {
 		} else {
 			$data['total'] = $order_total;
 		}
+		
+		//danielles code
+		if ($order_total > 0){
+			
+		}
 
 		$data['order'] = $this->url->link('sale/order', 'token=' . $this->session->data['token'], 'SSL');
 

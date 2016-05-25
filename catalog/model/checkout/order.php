@@ -789,6 +789,11 @@ class ModelCheckoutOrder extends Model {
 						}
 					}
 				}
+			
+			//danielles code: get pdf
+			
+				
+				
 			}
 
 			// If order status is not 0 then send update text email
