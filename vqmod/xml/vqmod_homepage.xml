@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modification>
+   <id>Replace the css property in heading title in Home page</id>
+   <version>1.0</version>
+   <vqmver>2.X</vqmver>
+   <author>Tuts+</author>
+   <file name="catalog/view/theme/default/template/common/home.tpl">
+       <operation info="Replace the css property in heading title in Home page">
+           <search position="replace"><![CDATA[
+           <h1 style="display: none;">
+           ]]></search>
+           <add><![CDATA[
+           <h1>
+           ]]></add>
+       </operation>
+   </file>
+</modification>
