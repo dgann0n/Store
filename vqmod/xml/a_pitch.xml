@@ -52,9 +52,9 @@
 				<search position="before"><![CDATA[<?php if ($product_option['type'] == 'select' ||]]></search>
 				<add><![CDATA[
 					<?php if ($product_option['type'] == 'web2print') { 
-						//echo '<input id="web2print_option_values" type="hidden" name="product_option[' . $option_row . '][value]" value="" />';
+						echo '<input id="web2print_option_values" type="hidden" name="product_option[' . $option_row . '][value]" value="" />';
 						?>
-						<div id="web2print_init_option"></div>
+						//<div id="web2print_init_option"></div>
 						<?php
 					} ?>
 				]]></add>
