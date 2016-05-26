@@ -242,8 +242,8 @@
 		<operation>
 				<search position="after"><![CDATA[$product['product_id']]]></search>
 				<add><![CDATA[
-					'design_id'   = $product['design_id'],
-					'upload'   = $product['upload'],
+					'design_id'   == $product['design_id'],
+					'upload'   == $product['upload'],
 				]]></add>
 		</operation>
 	</file>
