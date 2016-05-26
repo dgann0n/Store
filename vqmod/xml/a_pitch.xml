@@ -49,7 +49,7 @@
 	</file>
     <file error="log" name="admin/view/template/catalog/product_form.tpl">
         <operation>
-				<search position="before"><![CDATA[<?php if ($product_option['type'] == 'select' ?>]]></search>
+				<search position="before"><![CDATA[<?php if ($product_option['type'] == 'select' || ?>]]></search>
 				<add><![CDATA[
 					<?php if ($product_option['type'] == 'web2print') { 
 						echo '<input id="web2print_option_values" type="hidden" name="product_option[' . $option_row . '][value]" value="" />';
