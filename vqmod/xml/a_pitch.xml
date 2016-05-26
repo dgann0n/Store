@@ -193,8 +193,8 @@
 								}
 							}
 							$this->data[$key] = array(
-								'design_id'		   => $current_design_id,
-								'upload'		   => $current_upload_opt,
+								'design_id'		   = $current_design_id,
+								'upload'		   = $current_upload_opt,
 				]]></add>
 		</operation>
 		<operation error="skip">
