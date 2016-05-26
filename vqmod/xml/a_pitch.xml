@@ -193,8 +193,8 @@
 								}
 							}
 							$this->data[$key] = array(
-								'design_id'		   = $current_design_id,
-								'upload'		   = $current_upload_opt,
+								'design_id'		   => $current_design_id,
+								'upload'		   => $current_upload_opt,
 				]]></add>
 		</operation>
 		<operation error="skip">
@@ -242,8 +242,8 @@
 		<operation>
 				<search position="after"><![CDATA[$product['product_id']]]></search>
 				<add><![CDATA[
-					'design_id'   => $product['design_id'],
-					'upload'   => $product['upload'],
+					'design_id'   = $product['design_id'],
+					'upload'   = $product['upload'],
 				]]></add>
 		</operation>
 	</file>
