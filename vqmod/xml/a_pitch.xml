@@ -328,10 +328,10 @@
 			<search index="1" position="before"><![CDATA[if ($query->num_rows) {]]></search>
 			<add><![CDATA[
 					//pitchprint tweaks...
-					if (isset($this->session->data['w2p_projects'][$product_id]['image'])) {
-						$imgs = explode(',', $this->session->data['w2p_projects'][$product_id]['image']);
+					//if (isset($this->session->data['w2p_projects'][$product_id]['image'])) {
+					//	$imgs = explode(',', $this->session->data['w2p_projects'][$product_id]['image']);
 						$query->row['image'] = $imgs[0];
-					}
+					//}
 					
 					$current_design_id = "0";
 					$current_upload_opt = "0";
