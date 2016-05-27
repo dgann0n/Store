@@ -93,7 +93,7 @@ var PPCLIENT=PPCLIENT||{};
 			designCat:d.isCategory?d.designId:void 0,
 			projectId:d.projectId,
 			rscBase:d.rscBase,
-			autoInitialize:false,
+			autoInitialize:!d.isCategory,
 			isUserproject:!1,
 			isAdmin:!1,
 			langCode:d.langCode,
@@ -101,7 +101,7 @@ var PPCLIENT=PPCLIENT||{};
 			userData:d.userData,
 			
 			onReady:c.onReady,
-			autoShow:d.autoShow,
+			autoShow:false,
 			onShown:c.onShown,
 			onSave:c.onSave,
 			onClose:c.onClose,
