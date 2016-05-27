@@ -479,7 +479,7 @@
 				<add><![CDATA[
 					<!-- Loading PitchPrint Javascripts and Styles -->
 					<link href="catalog/view/javascript/jquery/magnific/magnific-popup.css" rel="stylesheet">
-					<script src="//dta8vnpq1ae34.cloudfront.net/app/js/pp.client.js" type="text/javascript"></script>
+					<script src="catalog/view/javascript/pp.client.js" type="text/javascript"></script>
 					<?php
 						if (isset($GLOBALS['pitchprint']['file_core'])) {
 							echo '<script src="catalog/view/javascript/jquery/magnific/jquery.magnific-popup.min.js" type="text/javascript"></script> ';
@@ -568,7 +568,7 @@
 								ocVersion: 2
 							}
 							$(function(){
-								
+								if (typeof PPCLIENT.start === 'function') PPCLIENT.start();
 							});
 							
 						<?php 
