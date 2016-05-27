@@ -555,7 +555,7 @@
 							
 							$(function(){
 								if (typeof PPCLIENT.init === 'function') PPCLIENT.init();
-								
+								if (typeof PPCLIENT.start === 'function') PPCLIENT.start();
 							});
 						<?php } else { ?>
 							PPCLIENT.vars = {
@@ -568,7 +568,7 @@
 								ocVersion: 2
 							}
 							$(function(){
-								if (typeof PPCLIENT.start === 'function') PPCLIENT.start();
+								
 							});
 							
 						<?php 
