@@ -16,7 +16,7 @@ c.designer.getModel().c.designId=a.id,c.designer.getModel().c.mode="new",d.edito
 else d.defaultImages&&!d.maintainImages&&b(".images").empty().append(d.defaultImages),d.defaultImages=void 0,b("#pp_customize_design_btn").hide()
 },c.onLibReady=function(){d.loadingCatLib&&(b.unblockUI(),d.loadingCatLib=!1,c.onReady())
 },c.clearDesign=function(){b("#pp_clear_design_btn").attr("disabled","disabled"),b("#pp_customize_design_btn").attr("disabled","disabled"),c.saveSess({clear:!0})
-},c.showDesigner=function(){d.isInline?(d.autoShow||c.expandEditor(),b("#pp_customize_design_btn").hide()):c.designer.show()}
+},c.showDesigner=function(){d.isInline?(d.autoShow||c.expandEditor(),setTimeout(function(){c.designer.show()},1e3),b("#pp_customize_design_btn").hide()):c.designer.show()}
 ,c.setBtnPref=function(a){if("function"==typeof d.functions.customSetBtnPref)return d.functions.customSetBtnPref();
 
 
