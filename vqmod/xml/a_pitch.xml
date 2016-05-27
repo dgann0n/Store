@@ -533,7 +533,7 @@
 								designId: '<?php echo $GLOBALS['pitchprint']['design_id']; ?>',
 								inline: '<?php echo $GLOBALS['pitchprint']['inline_value']; ?>',
 								maintainImages: <?php echo $GLOBALS['pitchprint']['maintain_images_value']; ?>,
-								
+								autoShow: <?php echo $GLOBALS['pitchprint']['showonstartup_value']; ?>,
 								apiKey: '<?php echo $GLOBALS['pitchprint']['api']; ?>',
 								product: {
 									id: '<?php echo $product_id; ?>',
@@ -554,7 +554,7 @@
 							}
 							
 							$(function(){
-								if (typeof PPCLIENT.init === 'function') PPCLIENT.init();
+								
 								if (typeof PPCLIENT.start === 'function') PPCLIENT.start();
 							});
 						<?php } else { ?>
