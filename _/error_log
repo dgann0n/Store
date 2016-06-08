@@ -1,0 +1,6 @@
+[02-Jun-2016 16:00:09 UTC] PHP Notice:  Constant HTTP_SERVER already defined in /home/redwoodtechlinux/public_html/novusprintflow.com/config.php on line 4
+[02-Jun-2016 16:00:09 UTC] PHP Notice:  Constant HTTPS_SERVER already defined in /home/redwoodtechlinux/public_html/novusprintflow.com/config.php on line 8
+[02-Jun-2016 16:00:10 UTC] PHP Notice:  Constant HTTP_SERVER already defined in /home/redwoodtechlinux/public_html/novusprintflow.com/config.php on line 4
+[02-Jun-2016 16:00:10 UTC] PHP Notice:  Constant HTTPS_SERVER already defined in /home/redwoodtechlinux/public_html/novusprintflow.com/config.php on line 8
+[02-Jun-2016 16:14:17 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/redwoodtechlinux/public_html/novusprintflow.com/config.php on line 32
+[02-Jun-2016 16:14:17 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/redwoodtechlinux/public_html/novusprintflow.com/config.php on line 32

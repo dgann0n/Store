@@ -97,6 +97,9 @@ class ControllerCheckoutCart extends Controller {
 				$option_data = array();
 
 				foreach ($product['option'] as $option) {
+					
+					
+
 					if ($option['type'] != 'file') {
 						$value = $option['value'];
 					} else {

@@ -8,7 +8,6 @@ $_['text_index']        = 'Brand Index:';
 $_['text_error']        = 'Brand not found!';
 $_['text_empty']        = 'There are no products to list.';
 $_['text_quantity']     = 'Qty:';
-$_['text_manufacturer'] = 'Brand:';
 $_['text_model']        = 'Product Code:';
 $_['text_points']       = 'Reward Points:';
 $_['text_price']        = 'Price:';

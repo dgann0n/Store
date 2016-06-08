@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<modification>
+    <name>Config catalog images subdirectory</name>
+    <version>2.0</version>
+    <author>cmstory.com</author>
+    <description>Replaces hard coded subdir name 'catalog' with conigurable constant in config.php</description>
+
+    <file name="admin/controller/common/filemanager.php">
+        <operation>
+            <search position="replace"><![CDATA[DIR_IMAGE . 'catalog]]></search>
+            <add><![CDATA[DIR_IMAGE . IMAGESUBDIR_CATALOG . ']]></add>
+        </operation>
+    </file>
+
+    <file name="catalog/model/openbay/ebay_product.php">
+        <operation error="skip">
+            <search position="replace"><![CDATA[DIR_IMAGE . 'catalog]]></search>
+            <add><![CDATA[DIR_IMAGE . IMAGESUBDIR_CATALOG . ']]></add>
+        </operation>
+    </file>
+
+    <file name="admin/controller/common/elfilemanager.php" info="For compatability with Full image manager">
+        <operation error="skip">
+            <search position="replace"><![CDATA[DIR_IMAGE . 'catalog]]></search>
+            <add><![CDATA[DIR_IMAGE . IMAGESUBDIR_CATALOG . ']]></add>
+        </operation>
+        <operation error="skip">
+            <search position="replace"><![CDATA[image/catalog]]></search>
+            <add><![CDATA[image/' . IMAGESUBDIR_CATALOG . ']]></add>
+        </operation>
+    </file>
+</modification>

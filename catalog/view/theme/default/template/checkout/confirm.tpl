@@ -16,7 +16,7 @@
         <td class="text-left"><a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a>
           <?php foreach ($product['option'] as $option) { ?>
           <br />
-          &nbsp;<small> - <?php echo $option['name']; ?>: <?php echo $option['value']; ?></small>
+          &nbsp;<small> - <?php echo $option['name']; ?> <?php echo $option['value']; ?></small>
           <?php } ?>
           <?php if($product['recurring']) { ?>
           <br />

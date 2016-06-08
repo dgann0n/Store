@@ -1,32 +1,59 @@
 <?php
-// HTTP
-define('HTTP_SERVER', 'http://' . $_SERVER['SERVER_NAME'].'/admin/');
-define('HTTP_CATALOG', 'http://' . $_SERVER['SERVER_NAME'].'/');
-
-// HTTPS
-define('HTTPS_SERVER', 'http://' . $_SERVER['SERVER_NAME'].'/admin/');
-define('HTTPS_CATALOG', 'http://' . $_SERVER['SERVER_NAME'].'/');
-
 // DIR
-define('DIR_APPLICATION', '/app/admin/');
-define('DIR_SYSTEM', '/app/system/');
-define('DIR_LANGUAGE', '/app/admin/language/');
-define('DIR_TEMPLATE', '/app/admin/view/template/');
-define('DIR_CONFIG', '/app/system/config/');
-define('DIR_IMAGE', '/app/image/');
-define('DIR_CACHE', '/app/system/storage/cache/');
-define('DIR_DOWNLOAD', '/app/system/storage/download/');
-define('DIR_LOGS', '/app/system/storage/logs/');
-define('DIR_MODIFICATION', '/app/system/storage/modification/');
-define('DIR_UPLOAD', '/app/system/storage/upload/');
-define('DIR_CATALOG', '/app/catalog/');
-
+define('DIR_APPLICATION', '/home/redwoodtechlinux/public_html/novusprintflow.com/admin/');
+define('DIR_SYSTEM', '/home/redwoodtechlinux/public_html/novusprintflow.com/system/');
+define('DIR_LANGUAGE', '/home/redwoodtechlinux/public_html/novusprintflow.com/admin/language/');
+define('DIR_TEMPLATE', '/home/redwoodtechlinux/public_html/novusprintflow.com/admin/view/template/');
+define('DIR_CONFIG', '/home/redwoodtechlinux/public_html/novusprintflow.com/system/config/');
+define('DIR_CATALOG', '/home/redwoodtechlinux/public_html/novusprintflow.com/catalog/');
 // DB
-$db = parse_url($_ENV["CLEARDB_DATABASE_URL"]); 
 define('DB_DRIVER', 'mysqli');
-define('DB_HOSTNAME', $db["host"]);
-define('DB_USERNAME', $db["user"]);
-define('DB_PASSWORD', $db["pass"]);
-define('DB_DATABASE', trim($db["path"],"/"));
+define('DB_HOSTNAME', 'localhost');
 define('DB_PORT', '3306');
 define('DB_PREFIX', 'oc_');
+
+$serverName = str_replace("www.", "", strtolower($_SERVER['SERVER_NAME']));
+if ($serverName=='novusprintflow.com') {
+	// novusprintflow.com
+	// DIR
+	define('DIR_IMAGE', '/home/redwoodtechlinux/public_html/novusprintflow.com/image/');
+	define('IMAGESUBDIR_CATALOG', 'Catalog_Novus');
+	define('DIR_CACHE', '/home/redwoodtechlinux/public_html/novusprintflow.com/system/storage/cache/');
+	define('DIR_DOWNLOAD', '/home/redwoodtechlinux/public_html/novusprintflow.com/system/storage/download/');
+	define('DIR_LOGS', '/home/redwoodtechlinux/public_html/novusprintflow.com/system/storage/logs/');
+	define('DIR_MODIFICATION', '/home/redwoodtechlinux/public_html/novusprintflow.com/system/storage/modification/');
+	define('DIR_UPLOAD', '/home/redwoodtechlinux/public_html/novusprintflow.com/system/storage/upload/');
+	// HTTP, HTTPS
+	define('HTTP_SERVER', 'http://www.novusprintflow.com/admin/');
+	define('HTTP_CATALOG', 'http://www.novusprintflow.com/');
+	define('HTTPS_SERVER', 'http://www.novusprintflow.com/admin/');
+	define('HTTPS_CATALOG', 'http://www.novusprintflow.com/');
+	// DB
+	define('DB_USERNAME', 'dgannon');
+	define('DB_PASSWORD', '@Boston1991');
+	define('DB_DATABASE', 'novusprintflow');
+} else{
+	// fake site
+	// DIR
+	define('DIR_IMAGE', '/home/redwoodtechlinux/public_html/novusprintflow.com/image/');
+	define('IMAGESUBDIR_CATALOG', 'Catalog_FakeStore');
+	define('DIR_CACHE', '/home/redwoodtechlinux/public_html/novusprintflow.com/system/storageFakeStore/cache/');
+	define('DIR_DOWNLOAD', '/home/redwoodtechlinux/public_html/novusprintflow.com/system/storageFakeStore/download/');
+	define('DIR_LOGS', '/home/redwoodtechlinux/public_html/novusprintflow.com/system/storageFakeStore/logs/');
+	define('DIR_MODIFICATION', '/home/redwoodtechlinux/public_html/novusprintflow.com/system/storageFakeStore/modification/');
+	define('DIR_UPLOAD', '/home/redwoodtechlinux/public_html/novusprintflow.com/system/storageFakeStore/upload/');
+	// HTTP, HTTPS
+	define('HTTP_SERVER', 'http://fakestore.novusprintflow.com/admin/');
+	define('HTTP_CATALOG', 'http://fakestore.novusprintflow.com/');
+	define('HTTPS_SERVER', 'http://fakestore.novusprintflow.com/admin/');
+	define('HTTPS_CATALOG', 'http://fakestore.novusprintflow.com/');
+	// DB
+    	define('DB_USERNAME', 'dgannon');
+    	define('DB_PASSWORD', '@Boston1991');
+	define('DB_DATABASE', 'NewStoreTemp');
+	
+	
+}
+
+
+

@@ -30,9 +30,7 @@
     <?php } ?>
     <div id="content" class="<?php echo $class; ?>"><?php echo $content_top; ?>
       <h1><?php echo $heading_title; ?>
-        <?php if ($weight) { ?>
-        &nbsp;(<?php echo $weight; ?>)
-        <?php } ?>
+ 
       </h1>
       <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data">
         <div class="table-responsive">
@@ -60,7 +58,7 @@
                   <?php if ($product['option']) { ?>
                   <?php foreach ($product['option'] as $option) { ?>
                   <br />
-                  <small><?php echo $option['name']; ?>: <?php echo $option['value']; ?></small>
+                  <small><?php echo $option['name']; ?> <?php echo $option['value']; ?></small>
                   <?php } ?>
                   <?php } ?>
                   <?php if ($product['reward']) { ?>

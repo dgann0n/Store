@@ -559,6 +559,7 @@ class ControllerProductProduct extends Controller {
 				$this->response->setOutput($this->load->view('default/template/error/not_found.tpl', $data));
 			}
 		}
+
 	}
 
 	public function review() {
@@ -705,4 +706,34 @@ class ControllerProductProduct extends Controller {
 		$this->response->addHeader('Content-Type: application/json');
 		$this->response->setOutput(json_encode($json));
 	}
+	
+	public function getPDF(){
+		define('PITCH_APIKEY', 'f091ce75222ace8892342ed6f406d70d');
+		define('PITCH_SECRETKEY', '[qJ(]kns8d1BD87uKFZ7iY909wBV[7');
+
+		function generateSignature () {
+			$timestamp = time();
+			$signature = md5(PITCH_APIKEY . PITCH_SECRETKEY . $timestamp);
+			return array ('timestamp'=>$timestamp, 'apiKey'=>PITCH_APIKEY, 'signature'=>$signature);
+		}
+
+		$ch = curl_init();
+		curl_setopt($ch, CURLOPT_URL, 'https://pitchprint.net/api/runtime/fetch-pdf');
+		curl_setopt($ch, CURLOPT_POST, true);
+
+		$opts = generateSignature();
+		$opts['projectId'] = '64';
+
+		curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($opts));
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+		$output = curl_exec($ch);
+		curl_close($ch);
+
+		header('Content-Type: application/pdf');
+
+		echo $output;
+	}
+	
+	
 }

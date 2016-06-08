@@ -161,18 +161,6 @@
 		</operation>
 	</file>
 	
-	
-	
-    
-    <file error="skip" name="catalog/language/*/common/footer.php">
-		<operation error="skip">
-				<search position="replace"><![CDATA[<br />]]></search>
-				<add><![CDATA[
-					&amp; <a target="_blank" href="http://pitchprint.com">PitchPrint</a><br />
-				]]></add>
-		</operation>
-	</file>
-	
     <file error="log" name="system/library/cart/cart.php,system/library/cart.php">
 		<operation error="skip">
 				<search position="replace"><![CDATA[$this->data[$key] = array(]]></search>
@@ -225,8 +213,10 @@
 				<add><![CDATA[} elseif ($option_query->row['type'] == 'web2print' || $option_query->row['type'] == 'text' ||]]></add>
 		</operation>
 	</file>
+	
+	
     <file error="log" name="catalog/controller/checkout/cart.php">
-		<operation>
+		<!--operation>
 				<search position="replace"><![CDATA[if ($option['type'] != 'file') {]]></search>
 				<add><![CDATA[
 					if ($option['type'] == 'web2print') {
@@ -238,7 +228,7 @@
 		<operation>
 				<search position="replace"><![CDATA[(utf8_strlen($value) > 20 ? utf8_substr($value, 0, 20) . '..' : $value)]]></search>
 				<add><![CDATA[$value]]></add>
-		</operation>
+		</operation-->
 		<operation>
 				<search position="after"><![CDATA[. $product['product_id'])]]></search>
 				<add><![CDATA[,
@@ -247,6 +237,8 @@
 				]]></add>
 		</operation>
 	</file>
+	
+	
     <file error="log" name="catalog/controller/checkout/confirm.php">
 		<operation>
 				<search position="replace"><![CDATA[if ($option['type'] != 'file') {]]></search>
@@ -301,7 +293,7 @@
 		<operation>
 				<search position="before"><![CDATA[<h2><?php echo $text_my_account; ?></h2>]]></search>
 				<add><![CDATA[
-					<h2 pp-data="text_my_recent"></h2>
+					<h2>My Saved Designs</h2> <h5>(May take a moment to load...)</h5>
 					  <div class="content" id="pp_mydesigns_div"></div>
 					  <script src="catalog/view/javascript/jquery/magnific/jquery.magnific-popup.min.js" type="text/javascript"></script>
 				]]></add>
